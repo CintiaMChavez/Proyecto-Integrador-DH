@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-integrador-dh",
+  "version": "1.0.0",
+  "description": "El siguiente proyecto trata sobre una web Ecommerce enfocada en la venta de bebidas alcohólicas y no alcohólicas de calidad premium e importadas.\r Como público objetivo nos dirigiremos a un grupo cuyo rango etario varía entre los 26 y 45 años. Éste grupo pertenece a la clase social alta o media alta, están interesados en experimentar nuevas experiencias, les atrae la vida social nocturna muy activa y se caracterizan por los gustos refinados.\r Nuestro objetivo es ofrecer al cliente una gran variedad de bebidas a precios exclusivos, brindarle recomendaciones basadas en sus principales gustos, selecciones y compras, buscamos ofrecer productos de origen internacional de grandes marcas y generar una experiencia de compra placentera e intuitiva.\r La paleta de colores y distribución de la web será acorde a las principales características de nuestros usuarios y lo que ellos buscan a la hora de elegir productos de alta calidad.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CintiaMChavez/Proyecto-Integrador-DH.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CintiaMChavez/Proyecto-Integrador-DH/issues"
+  },
+  "homepage": "https://github.com/CintiaMChavez/Proyecto-Integrador-DH#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
