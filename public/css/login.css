@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+        font-family: 'Poppins', sans-serif;
+        color: #F5F5F5;
+        font-size: 1rem;
+        line-height: 1.5em;
+        margin: 0;
+        background-color: #131313;
+    
+
+}
+.header{
+    background-color: #58256e;
+    color: #F5F5F5;
+    padding: 0.75rem 0;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+    .header a{
+        color: #cfaa00;
+        text-decoration: none;
+    }
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    height: 50px;;
+}
+    .logo img{
+        max-height: 50px;
+    }
+
+.buscador{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buscador input{
+    border-radius: 10px;
+    transition: 5s;
+    content: Buscar Producto;
+    width: 300px;
+    height: 20px;
+}
+    
+.buscador input:focus{
+    background: white;
+    border-color: #cfaa00;
+}
+    
+.menu-icon{
+    display: none;
+}
+
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;;
+}
+    .navigation ul li{
+        display: inline-block;
+        align-items: center
+    }
+        .navigation ul li a{
+            display: block;
+            padding: 0.25rem 0.5rem;
+            transition: all 0.4s linear;
+            border-radius: 5px;
+        }
+        .navigation ul li a:hover{
+            background-color: #cfaa00;
+            color: #58256e;
+        }
+
+.main{
+    padding-top: 7rem;
+}
+
+
+.form-login{
+    width: 400px;
+    height: 340px;
+    background:#5691a4;
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top: 4px solid #cfaa00;
+    color: beige;
+    
+}
+.form-login h5{
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+
+}
+.controls{
+    width: 100%;
+    border:1px solid #cfaa00;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #582556;
+    font-size: 14px;
+    font-weight: bold;
+}
+.buttons{
+    width: 100%;
+    height: 40px;
+    background:#cfaa00;
+    border: none;
+    color: beige;
+    margin-bottom: 16px;
+
+}
+.form-login p{
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+.form-login a{
+    color:beige;
+    text-decoration: none;
+    font: size 14px;
+}
+.form-login a:hover{
+    text-decoration: underline;
+}
+
+.footer{
+    margin-top: 6rem;
+    background-color: #58256e;
+    color: #F5F5F5;
+    padding: 4rem;
+    text-align: center;
+}
