@@ -91,7 +91,7 @@ aside {
 
 .basket {
     width: 70%;
-    padding-top: 29px;
+    padding-top: 150px;
 }
 
 .basket-module {
@@ -141,7 +141,7 @@ ul {
 }
 
 li {
-    color: #111;
+    color: #fff;
     display: inline-block;
     padding: 0.625rem 0;
 }
@@ -159,7 +159,7 @@ li.subtotal:before {
 .quantity,
 .subtotal {
     width: 15%;
-    padding: 0px 0px 20px 105px;
+    padding: 0px 0px 10px 15px;
 }
 
 .subtotal {
@@ -178,7 +178,8 @@ li.subtotal:before {
 .remove button {
     background-color: transparent;
     color: #fff;
-    padding: 130px 0px 100px 195px;
+    float: right;
+    padding: 120px 15px;
     text-decoration: underline;
     text-transform: uppercase;
 }
@@ -188,6 +189,7 @@ li.subtotal:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    padding: 0px 0px 10px 15px;
 }
 
 .basket-product {
@@ -363,6 +365,7 @@ aside {
         text-align: left;
         margin-top: 0.75rem;
         position: relative;
+        
     }
     .remove button {
         padding: 0;
