@@ -1,18 +1,5 @@
 @charset "utf-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
-html,
-html a {
-    -webkit-font-smoothing: antialiased;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-}
-
-body {
-    background-color: #fff;
-    color: #666;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 68.5%;
-    margin: 0 auto;
-}
 
 a {
     border: 0 none;
@@ -89,7 +76,7 @@ main {
     clear: both;
     font-size: 0.75rem;
     margin: 0 auto;
-    overflow: hidden;
+  
     padding: 1rem 0;
     width: 960px;
 }
@@ -104,6 +91,7 @@ aside {
 
 .basket {
     width: 70%;
+    padding-top: 150px;
 }
 
 .basket-module {
@@ -153,7 +141,7 @@ ul {
 }
 
 li {
-    color: #111;
+    color: #fff;
     display: inline-block;
     padding: 0.625rem 0;
 }
@@ -171,6 +159,7 @@ li.subtotal:before {
 .quantity,
 .subtotal {
     width: 15%;
+    padding: 0px 0px 10px 15px;
 }
 
 .subtotal {
@@ -188,8 +177,9 @@ li.subtotal:before {
 
 .remove button {
     background-color: transparent;
-    color: #777;
-    padding: 130px 0px 110px 175px;
+    color: #fff;
+    float: right;
+    padding: 120px 15px;
     text-decoration: underline;
     text-transform: uppercase;
 }
@@ -199,6 +189,7 @@ li.subtotal:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    padding: 0px 0px 10px 15px;
 }
 
 .basket-product {
@@ -239,10 +230,11 @@ aside {
     float: right;
     position: relative;
     width: 30%;
+    padding-top: 165px;
 }
 
 .summary {
-    background-color: #fff;
+    background-color: #111;
     border: 1px solid #fff;
     padding: 1rem;
     -webkit-box-sizing: border-box;
@@ -251,7 +243,7 @@ aside {
 }
 
 .summary-total-items {
-    color: #666;
+    color: #fff;
     font-size: 0.875rem;
     text-align: center;
 }
@@ -272,7 +264,7 @@ aside {
 .total-value,
 .promo-title,
 .promo-value {
-    color: #111;
+    color: #fff;
     float: left;
     width: 50%;
 }
@@ -373,6 +365,7 @@ aside {
         text-align: left;
         margin-top: 0.75rem;
         position: relative;
+        
     }
     .remove button {
         padding: 0;
