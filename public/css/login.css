@@ -19,7 +19,7 @@ body {
     
     background-position: 0 0;
   }
-.header-fixed {
+  .header-fixed {
     background-color: #58256e;
     padding: 20px 40px;
     height: 80px;
@@ -136,62 +136,27 @@ body.fixed .header-fixed .header-limiter nav {
     border-radius: 10px;
     width: 250px;
 }
-.logo-nav-container{
+#btnBuscar{
+    border-radius: 15px;
+    height: 35px;
+}
+
+.container2{
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.contenido{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    align-content: space-between;
 }
 
-.logo{
-    height: 50px;;
+.contactos{
+    padding: 30px;
+    padding-top: 0%;
 }
-    .logo img{
-        max-height: 50px;
-    }
-
-.buscador{
-    justify-content: space-between;
-    align-items: center;
-}
-
-.buscador input{
-    border-radius: 10px;
-    transition: 5s;
-    content: Buscar Producto;
-    width: 300px;
-    height: 20px;
-}
-    
-.buscador input:focus{
-    background: white;
-    border-color: #cfaa00;
-}
-    
-.menu-icon{
-    display: none;
-}
-
-.navigation ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;;
-}
-    .navigation ul li{
-        display: inline-block;
-        align-items: center
-    }
-        .navigation ul li a{
-            display: block;
-            padding: 0.25rem 0.5rem;
-            transition: all 0.4s linear;
-            border-radius: 5px;
-        }
-        .navigation ul li a:hover{
-            background-color: #cfaa00;
-            color: #58256e;
-        }
-
 .main{
     padding-top: 7rem;
 }
