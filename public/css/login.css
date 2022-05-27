@@ -16,7 +16,7 @@ body {
 body {
     background-image: url("/img/alcoholic-fondo.jpg");
     background-repeat: no-repeat;
-    
+    opacity: 0.9;
     background-position: 0 0;
   }
   .header-fixed {
