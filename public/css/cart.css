@@ -1,38 +1,3 @@
-@charset "utf-8";
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
-
-a {
-    border: 0 none;
-    outline: 0;
-    text-decoration: none;
-}
-
-strong {
-    font-weight: bold;
-}
-
-p {
-    margin: 0.75rem 0 0;
-}
-
-h1 {
-    font-size: 0.75rem;
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
-}
-
-input,
-button {
-    border: 0 none;
-    outline: 0 none;
-}
-
-button {
-    background-color: #666;
-    color: #fff;
-}
-
 button:hover,
 button:focus {
     background-color: #555;
@@ -45,7 +10,6 @@ img,
     width: 100%;
 }
 
-input,
 button,
 .basket,
 .basket-module,
@@ -76,9 +40,10 @@ main {
     clear: both;
     font-size: 0.75rem;
     margin: 0 auto;
-  
     padding: 1rem 0;
-    width: 960px;
+    width: 100%;
+    position: fixed;
+    scroll-behavior: inherit;
 }
 
 .basket,
@@ -91,7 +56,6 @@ aside {
 
 .basket {
     width: 70%;
-    padding-top: 150px;
 }
 
 .basket-module {
@@ -123,9 +87,11 @@ label {
 
 .promo-code-apli {
     border-radius: 4px;
-    font-size: 0.625rem;
-    margin-left: 0.625rem;
-    padding: 0.6875rem 1.25rem 0.625rem;
+    margin-left: 2.625rem;
+    float: right;
+    margin: inherit;
+    width: 60px;
+    height: 30px;
 }
 
 .basket-labels {
@@ -221,7 +187,7 @@ li.subtotal:before {
     background-color: #ccc;
     border: 1px solid #aaa;
     border-radius: 4px;
-    font-size: 0.625rem;
+    font-size: 0.725rem;
     padding: 2px;
     width: 3.75rem;
 }
@@ -230,7 +196,7 @@ aside {
     float: right;
     position: relative;
     width: 30%;
-    padding-top: 165px;
+    padding-top: 25px;
 }
 
 .summary {
@@ -289,7 +255,7 @@ aside {
 }
 
 .summary-delivery {
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 
 .subtotal-value,
@@ -365,7 +331,6 @@ aside {
         text-align: left;
         margin-top: 0.75rem;
         position: relative;
-        
     }
     .remove button {
         padding: 0;
