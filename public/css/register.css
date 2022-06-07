@@ -3,7 +3,16 @@
     padding:0;
     box-sizing: border-box;
 }
+body {
+    background-image: url("/img/alcoholic-fondo.jpg");
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    background-position: 0 0;
+    box-shadow: #131313;
+  }
+
 body{
+   
     font-family: 'Poppins', sans-serif;
     color: #F5F5F5;
     font-size: 1rem;
@@ -11,20 +20,123 @@ body{
     margin: 0;
     background-color: #131313;
 }
-header{
+.header-fixed {
     background-color: #58256e;
-    color: #F5F5F5;
-    padding: 0.75rem 0;
+    padding: 20px 40px;
+    height: 80px;
+    color: #ffffff;
+    box-sizing: border-box;
+    top: -100px;
 
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
+    -webkit-transition: top 0.3s;
+    transition: top 0.3s;
 }
-    .header a{
-        color: #cfaa00;
-        text-decoration: none;
-    }
+
+.header-fixed .header-limiter {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder {
+    height: 80px;
+    display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+    float: left;
+    font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+    line-height: 40px;
+    margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+    color: #5383d3;
+}
+
+/* The navigation links */
+.header-fixed .header-limiter a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+    font: 16px Arial, Helvetica, sans-serif;
+    float: right;
+    line-height: 3;
+
+}
+
+.header-fixed .header-limiter nav a {
+    display: inline-block;
+    padding: 0 5px;
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover {
+    opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+    color: #608bd2;
+    pointer-events: none;
+    opacity: 1;
+}
+
+body.fixed .header-fixed {
+    padding: 10px 40px;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+    display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+    line-height: 28px;
+    font-size: 13px;
+}
+
+.logo {
+    background-size: 44px 31px;
+    width: 200px;
+   
+    top: 8px;
+    left: 10px;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+.buscadorr{
+    align-items: center;
+}
+
+#buscadorPrincipal{
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+    height: 25px;
+    border-radius: 10px;
+    width: 250px;
+}
 
 .logo-nav-container{
     display: flex;
@@ -89,18 +201,18 @@ header{
 
 .form-register{
     width: 400px;
-    background:#5691a4;
+   
     padding: 30px;
     margin: auto;
     margin: top 100px;
     border-radius: 4px;
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: rgb(241, 233, 243);
     box-shadow: 7px 13px 37px #131313;
 }
 .form-register h4{
-    font: size 22px;
-    margin: bottom 20px;
+    font: size 50px;
+    margin: bottom 50px;
 }
 .controls{
     width: 100%;
@@ -118,29 +230,147 @@ header{
     line-height: 40px;
 }
 .form-register a{
-    color: white;
+    color: rgb(158, 9, 163);
     text-decoration: none;
 }
 .form-register a:hover{
-    color: white;
+    color:white;
     text-decoration: underline;
 }
-.form-register.botons{
+
+.r{
     width: 100%;
-    background: #5691a4;
     border: none;
     padding:12px;
-    color: white;
     margin: 16px 0;
     font-size: 16px;
 }
-
-
-
-.footer{
-    margin-top: 6rem;
+.footer ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
     background-color: #58256e;
     color: #F5F5F5;
-    padding: 4rem;
-    text-align: center;
+  position: relative;
 }
+.footer-cta {
+    padding-bottom: 25px;
+  border-bottom: 1px solid #F5F5F5;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #f5f5f5;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 25px;
+  position: relative;
+  z-index: 2;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-social-icon span {
+  color: #f5f5f5;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget ul li {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #cfaa00;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.copyright-area{
+    text-align: center;
+  background: #131313;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #cfaa00;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #cfaa00;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+    .header-fixed {
+        padding: 20px 0;
+        height: 75px;
+    }
+
+    .header-fixed .header-limiter h1 {
+        float: none;
+        margin: -8px 0 10px;
+        text-align: center;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    .header-fixed .header-limiter nav {
+        line-height: 4;
+        float: none;
+    }
+
+    .header-fixed .header-limiter nav a {
+        font-size: 13px;
+    }
+
+    body.fixed .header-fixed {
+        display: none;
+    }
+
+}
+
