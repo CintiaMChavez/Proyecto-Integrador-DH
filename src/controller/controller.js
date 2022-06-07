@@ -19,6 +19,12 @@ const controller = {
     add_product: (req, res) => {
         res.sendFile(path.join(__dirname, "../views/add_product.html"))
     },
+    header: (req, res) => {
+        res.sendFile(path.join(__dirname, "../views/header.html"))
+    },
+    footer: (req, res) => {
+        res.sendFile(path.join(__dirname, "../views/footer.html"))
+    },
 }
 
 module.exports = controller;
