@@ -7,7 +7,8 @@ routes.get("/", controller.index);
 
 routes.get("/login", controller.login);
 routes.get("/product_cart", controller.product_cart);
-routes.get("/product_Detail", controller.product_Detail);
+routes.get("/product_detail", controller.product_detail);
 routes.get("/register", controller.register);
+routes.get("/add_product", controller.add_product);
 
 module.exports = routes;
