@@ -6,7 +6,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // llamando_servidor
 app.listen(3030, () => {
-        console.log("Servidor corriendo!!!💻");
+        console.log("Servidor corriendo!(PUERTO 3030)");
     })
     // Rutas
 app.get("/", (req, res) => {
