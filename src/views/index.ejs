@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('./partials/head.ejs')%>
+</head>
+
+<body>
+    <header>
+        <%- include('./partials/header.ejs')%>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="landing">
+                <div class="call">
+                    <h1>
+                        Las mejores bebidas
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, nesciunt, saepe sapiente facere, placeat accusantium porro fuga repudiandae minus provident excepturi expedita iste? Aspernatur similique magni placeat ullam quibusdam omnis!
+                    </p>
+                    <div class="botones">
+                        <a href="/product_detail" class="ingreso">
+                                    Ingresá
+                                </a>
+                        <a href="/register" class="registro">
+                                    Registrate
+                                </a>
+                    </div>
+                </div>
+                <img src="/img/Landing.jpg" alt="">
+            </div>
+        </div>
+        <div class="destacado">
+            <div class="container">
+                <h1 class="subtitulo">
+                    Productos Destacados
+                </h1>
+                <div id="slider">
+                    <a href="#" class="control_next">></a>
+                    <a href="#" class="control_prev">
+                    </a>
+                    <ul>
+                        <li><img src="/img/bebidas1.jpg" alt=""></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="recomendados">
+                <h1 class="subtitulo">
+                    Recomendaciones para vos
+                </h1>
+                <div class="productos">
+                    <a href="/product_detail">
+                        <div class="card">
+                            <img src="/img/absolut.jpg" alt="">
+                            <h2>Producto N1</h2>
+                            <h4>$12.345,67</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card">
+                            <img src="/img/whisky.jpg" alt="">
+                            <h2>Producto N2</h2>
+                            <h4>$12.345,67</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card">
+                            <img src="/img/perignon.jpg" alt="">
+                            <h2>Producto N3</h2>
+                            <h4>$12.345,67</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card">
+                            <img src="/img/Tequila.jpg" alt="">
+                            <h2>Producto N4</h2>
+                            <h4>$12.345,67</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="linea"> </div>
+        <div class="container">
+            <div class="otrosProd">
+                <h1 class="subtitulo">
+                    Otros Productos
+                </h1>
+                <div class="productoss">
+                    <a href="#">
+                        <div class="cards">
+                            <img src="/img/absolut.jpg" alt="">
+                            <h2>Producto N1</h2>
+                            <h4>$12.345,67</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="cards">
+                            <img src="/img/whisky.jpg" alt="">
+                            <h2>Producto N2</h2>
+                            <h4>$12.345,67</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="cards">
+                            <img src="/img/perignon.jpg" alt="">
+                            <h2>Producto N3</h2>
+                            <h4>$12.345,67</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="cards">
+                            <img src="/img/Tequila.jpg" alt="">
+                            <h2>Producto N4</h2>
+                            <h4>$12.345,67</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="linea"> </div>
+        <div class="container">
+            <div class="newsletter">
+                <h1 class="subtitulo">
+                    Suscribite a nuestro Newsletter
+                </h1>
+                <form>
+                    <input type="email" placeholder="Ingresa tu Email...">
+                    <a href="#" class="subs">Suscribirme</a>
+                </form>
+            </div>
+        </div>
+        <div class="linea"> </div>
+        <div class="container">
+            <div class="callback">
+                <h1>
+                    Comenzá a comprar ahora
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, nesciunt, saepe sapiente facere, placeat accusantium porro fuga repudiandae minus provident excepturi expedita iste? Aspernatur similique magni placeat ullam quibusdam omnis!
+                </p>
+                <div class="botonesCB">
+                    <a href="/login" class="ingreso">
+                                Ingresá
+                            </a>
+                    <a href="/register" class="registro">
+                                Registrate
+                            </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-section">
+        <%- include('./partials/footer.ejs')%>
+            </fooer>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function() {
+
+                    var showHeaderAt = 150;
+
+                    var win = $(window),
+                        body = $('body');
+
+                    // Show the fixed header only on larger screen devices
+
+                    if (win.width() > 400) {
+
+                        // When we scroll more than 150px down, we set the
+                        // "fixed" class on the body element.
+
+                        win.on('scroll', function(e) {
+
+                            if (win.scrollTop() > showHeaderAt) {
+                                body.addClass('fixed');
+                            } else {
+                                body.removeClass('fixed');
+                            }
+                        });
+
+                    }
+
+                });
+            </script>
+
+
+
+
+</body>
+
+</html>
