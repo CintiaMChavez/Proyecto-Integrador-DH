@@ -1,30 +1,28 @@
 const path = require("path");
 
-const controller = {
+module.exports = {
     index: (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/index.html"))
-    },
-    login: (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/login.html"))
-    },
-    product_cart: (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/product_cart.html"))
-    },
-    product_detail: (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/product_detail.html"))
-    },
-    register: (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/register.html"))
+        res.render('index')
+
     },
     add_product: (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/add_product.html"))
+        res.render('add_product')
+
     },
-    header: (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/header.html"))
+    login: (req, res) => {
+        res.render('login')
+
     },
-    footer: (req, res) => {
-        res.sendFile(path.join(__dirname, "../views/footer.html"))
+    product_cart: (req, res) => {
+        res.render('product_cart')
+
+    },
+    product_Detail: (req, res) => {
+        res.render('product_Detail')
+
+    },
+    register: (req, res) => {
+        res.render('register')
+
     },
 }
-
-module.exports = controller;
