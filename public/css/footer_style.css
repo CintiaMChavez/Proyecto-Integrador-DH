@@ -1,0 +1,124 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #F5F5F5;
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    width: 100%;
+    background-color: #131313;
+    
+}
+
+.container2{
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.contenido{
+    display: flex;
+    align-content: space-between;
+}
+
+.contactos{
+    padding: 30px;
+    padding-top: 0%;
+}
+
+.footer ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+    background-color: #58256e;
+    color: #F5F5F5;
+  position: relative;
+}
+.footer-cta {
+    padding-bottom: 25px;
+  border-bottom: 1px solid #F5F5F5;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #f5f5f5;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 25px;
+  position: relative;
+  z-index: 2;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-social-icon span {
+  color: #f5f5f5;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget ul li {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #cfaa00;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.copyright-area{
+    text-align: center;
+  background: #131313;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #cfaa00;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #cfaa00;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
