@@ -2,7 +2,18 @@
 <html lang="es">
 
 <head>
-    <%- include('./partials/head.ejs')%>
+    <title>
+        GOLDRINK - Premium Drinks
+    </title>
+    <link rel="icon" type="image/png" href="../public/img/icon-Goldrink.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normaize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -52,36 +63,22 @@
                 <h1 class="subtitulo">
                     Recomendaciones para vos
                 </h1>
-                <div class="productos">
-                    <a href="/product_detail">
-                        <div class="card">
-                            <img src="/img/absolut.jpg" alt="">
-                            <h2>Producto N1</h2>
-                            <h4>$12.345,67</h4>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="card">
-                            <img src="/img/whisky.jpg" alt="">
-                            <h2>Producto N2</h2>
-                            <h4>$12.345,67</h4>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="card">
-                            <img src="/img/perignon.jpg" alt="">
-                            <h2>Producto N3</h2>
-                            <h4>$12.345,67</h4>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="card">
-                            <img src="/img/Tequila.jpg" alt="">
-                            <h2>Producto N4</h2>
-                            <h4>$12.345,67</h4>
-                        </div>
-                    </a>
-                </div>
+                <% products.forEach(product=> { %>
+                    <div class="productos">
+                        <a href="/edit">
+                            <div class="card">
+                                <img src="/img/absolut.jpg" alt="">
+                                <h2>
+                                    <%= product.name %>
+                                </h2>
+                                <h4>
+                                    <%= product.description %> U$S
+                                        <%= product.price %>
+                                </h4>
+                            </div>
+                        </a>
+                        <%}) %>
+                    </div>
             </div>
         </div>
         <div class="linea"> </div>

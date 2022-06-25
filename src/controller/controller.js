@@ -1,28 +1,61 @@
+const { json } = require('express');
+const fs = require('fs');
 const path = require("path");
 
-module.exports = {
-    index: (req, res) => {
-        res.render('index')
+const { validationResult } = require('express-validator');
+const filePath = path.resolve(__dirname, '../data/products.json');
+const productArray = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
+const controller = {
+    browse: (req, res) => {
+        res.send('estamos en /products');
+    },
+    read: (req, res) => {
+        const productId = req.params.id
+        res.send('estamos en /products/' + productId);
+    },
+    create: (req, res) => {
+        //res.send('Estoy en FORMULARIO para crear producto');
+        res.render('create')
+    },
+    edit: (req, res) => {
+        const productId = req.params.id
+        res.send('formulario que edita un producto' + productId);
+    },
+    add: (req, res) => {
+        const arrayErrors = validationResult(req);
+        //if(!arrayErrors.isEmpty()) 
+
+        console.log("error =>", arrayErrors.errors.length);
+
+        if (arrayErrors.errors.length > 0) {
+            return res.render('create', {
+                messageErrors: arrayErrors.mapped(),
+                oldBodyData: req.body
+            });
+        }
+
+        productArray.push({
+            pdtName: req.body.pdtName,
+            pdtPrice: req.body.pdtPrice
+
+        })
+        fs.writeFileSync(filePath, JSON.stringify(productArray, null, ''))
+        console.log('Se gaurdo el dato ok');
+
+        //  Y luego rediecionar
+        res.redirect('/products?saved=true');
+
 
     },
-    add_product: (req, res) => {
-        res.render('add_product')
-
+    update: (req, res) => {
+        const productId = req.params.id
+        res.send('vamos actualizar del producto' + productId);
     },
-    login: (req, res) => {
-        res.render('login')
-
-    },
-    product_cart: (req, res) => {
-        res.render('product_cart')
-
-    },
-    product_Detail: (req, res) => {
-        res.render('product_Detail')
-
-    },
-    register: (req, res) => {
-        res.render('register')
-
-    },
+    delete: (req, res) => {
+        const productId = req.params.id
+        res.send('vamos eliminar / borrar del producto' + productId);
+    }
 }
+
+module.exports = controller;
