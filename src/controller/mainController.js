@@ -1,34 +1,46 @@
-const products = [{
-        id: 1,
-        name: "Carpaccio fresco",
-        description: "Entrada Carpaccio de salmón con cítricos",
-        price: 65.50
-    },
-    {
-        id: 2,
-        name: "Risotto de berenjena",
-        description: "Risotto de berenjena y queso de cabra ",
-        price: 47.00
-    },
-    {
-        id: 3,
-        name: "Mousse de arroz",
-        description: " Mousse de arroz con leche y aroma de azahar ",
-        price: 27.50
-    },
-    {
-        id: 4,
-        name: "Espárragos blancos",
-        description: " Espárragos blancos con vinagreta de verduras y jamón ibérico",
-        price: 37.50
-    }
-]
+const path = require('path');
+const fs = require('fs')
 
-module.exports = {
-    home: (req, res) => {
-        res.render('index', { products: products })
+let json_c = fs.readFileSync(
+    path.join(__dirname, "../models/data/news.json"), { encoding: "utf-8" }
+);
+let products_save = fs.readFileSync(
+    path.join(__dirname, "../models/data/products.json"), { encoding: "utf-8" }
+);
+
+let news = JSON.parse(json_c);
+let products = JSON.parse(products_save);
+
+const mainController = {
+
+    index: (req, res) => {
+
+        let selecciones = products.slice(-4);
+        res.render(path.join(__dirname, '../views/index.ejs'), { selecciones: selecciones, news: news })
     },
-    detail: (req, res) => {
-        res.render('product_Detail')
+
+    news: (req, res) => {
+
+        const detalleId = Number(req.params.id); //convierto el id string a un numero para poder hacer la triple comparacion
+
+        let search = news.find((news) => {
+            //filtro mis products y bco el id
+            return news.id_novedades === detalleId;
+        });
+
+        res.render(path.join(__dirname, '../views/prueba.ejs'), { search })
+    },
+
+    contacto: (req, res) => {
+        res.render(path.join(__dirname, '../views/contacto.ejs'))
+    },
+
+    allNews: (req, res) => {
+
+        res.render(path.join(__dirname, '../views/allNews.ejs'), { news: news })
     }
-}
+
+
+};
+
+module.exports = mainController;

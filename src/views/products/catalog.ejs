@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include('../partials/head.ejs')%>
+	<title>Catálogo - Terra Rossa</title>
+</head>
+
+<body>
+  <header>
+    <%- include('../partials/nav.ejs')%>
+  </header>
+  <% 
+  const formatter = new Intl.NumberFormat("es-AR", { 
+    style: "decimal",
+    minimumFractionDigits: 2,
+  }); 
+  %>
+  <section class="catalogo">
+    <div class="catalogo__headertitle">
+     <h1 class="catalogo__title"><strong>Catálogo</strong></h1>
+    </div>
+    <div class="catalogo__queries">
+      <div class="container__filtro">
+        <div class="container__filtro_title" id="filter"><h2>FILTROS</h2><i class="fa-solid fa-list"></i></div>        
+    <div id="show">
+      <ul class="filter-ul">
+        <li><p>Precio</p></li>
+        <div class="li-flex">
+        <li class="li-not num"><input type="range" id="precio" min="5000" max="30000" step="5000" value="5000" onchange="document.getElementById('outvol') .value='Hasta ' + value" list="tickmarks">
+          <output id="outvol" name="outvol" for="vol">Hasta 5.000</output> 
+        <datalist>
+          <option value="5000" class="value"></option>
+          <option value="10000" class="value"></option>
+          <option value="15000" class="value"></option>
+          <option value="20000" class="value"></option>
+          <option value="25000" class="value"></option>
+          <option value="30000" class="value"></option>
+        </datalist>
+          
+        </li>
+        <!-- <li class="li-not num"><input type="number" placeholder="Hasta" min="7000" max="30000" step="1000"></li>   -->
+        <!-- <li class="li-not submit"><button type="submit">Buscar</button></li> -->
+      </div>
+      </ul>
+      <ul class="filter-ul">
+          <li><p>Tipo</p></li>
+          <li class="li-not"><input type="checkbox" id="" name="tintos" value=""><p>Tintos</p></li>  
+          <li class="li-not"><input type="checkbox" id="" name="blancos" value=""><p>Blancos</p></li>  
+          <li class="li-not"><input type="checkbox" id="" name="especiales" value=""><p>Especiales</p></li>  
+          <li class="li-not"><input type="checkbox" id="" name="espumantes" value=""><p>Espumantes</p></li>  
+          <!-- <li class="li-not submit"><button >Buscar</button></li> -->
+      </ul>
+      <ul class="filter-ul">
+        <li><p>Variedad</p></li>
+        <div class="">
+          <li class="li-not"><input type="checkbox" id="" name="variedad" value=""><p>Malbec</p></li>  
+          <li class="li-not"><input type="checkbox" id="" name="variedad" value=""><p>Merlot</p></li>  
+          <li class="li-not"><input type="checkbox" id="" name="variedad" value=""><p>Pinot Noir</p></li>  
+          <li class="li-not"><input type="checkbox" id="" name="variedad" value=""><p>Cabernet Sauvignon</p></li>  
+          <li class="li-not"><input type="checkbox" id="" name="variedad" value=""><p>Pinot Noir</p></li>  
+          <li class="li-not"><input type="checkbox" id="" name="variedad" value=""><p>Syrah</p></li> 
+          <li class="li-not"><input type="checkbox" id="" name="variedad" value=""><p>Tempranillo</p></li>
+          <li class="li-not"><input type="checkbox" id="" name="variedad" value=""><p>Chardonnay<p></li>  
+
+
+ 
+
+          <li class="li-not submit"><button>Buscar</button></li>
+      </div>
+      </ul>
+    </div>
+      </div>
+
+      <div class="catalogo__conteiner">
+        <% productos.forEach(producto => { %>
+              <article class="cata__products">
+          <img class="cataimg__product" src="/img/productImg/<%= producto.imagen_producto%>" alt="aqui va la foto">
+          <p class="cataname__product"> <%= producto.nombre_producto %></p>
+          <p class="cataprecio__product">$ <%= formatter.format(producto.precio)%></p>
+          <div class="container__buttons">
+            <a class="catabutton__agregar" href="/product/product-cart/<%= producto.id_producto%>" target=""><i class="fa-solid fa-cart-shopping"></i> </a>
+            <a class="cata__eye" href="/product/product-detail/<%= producto.id_producto%>" target=""><i class="fa-regular fa-eye"></i></a>
+          </div>
+        </article>
+       <% })   %> 
+        
+
+      </div>
+    </div>
+
+  </section>
+  <footer class="footer">
+    <%- include('../partials/footer.ejs')%>
+  </footer>
+
+  <script>
+const onFil = document.getElementById('filter');
+
+onFil.addEventListener('click', () => {
+let show = document.getElementById('show');
+
+show.style.display === 'none' ? show.style.display = 'block' : show.style.display ='none';
+});
+
+  </script>
+
+</body>
+
+</html>
