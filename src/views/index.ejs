@@ -19,112 +19,170 @@
       <header>
           <%- include('./partials/header.ejs')%>
       </header>
-    <main>
+      <main class="main">
+        <div class="container">
+            <div class="landing">
+                <div class="call">
+                  <h1>
+                    Las mejores bebidas
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, nesciunt, saepe sapiente facere, placeat accusantium porro fuga repudiandae minus provident excepturi expedita iste? Aspernatur similique magni placeat ullam quibusdam omnis!
+                </p>
+                <div class="botones">
+                    <a href="/product_detail" class="ingreso">
+                                Ingresá
+                            </a>
+                    <a href="/register" class="registro">
+                                Registrate
+                            </a>
+                </div>
+              </div>
+              <img src="/img/Landing.jpg" alt="">
+            </div>
+        </div>
+        <div class="destacado">
+            <div class="container">
+                <h1 class="subtitulo">
+                    Productos Destacados
+                </h1>
+                <div id="slider">
+                  <a href="#" class="control_next">></a>
+                  <a href="#" class="control_prev">
+                  </a>
+                  <ul>
+                      <li><img src="/img/bebidas1.jpg" alt=""></li>
+                  </ul>
+              </div>
 
-      <!-- contenedor banner principal -->
-    <div class="container-slider">
-      <div class="slider">
-          <div class="pagination">
-              <div class="pagination__item" ></div>
-              <div class="pagination__item" ></div>
-              <div class="pagination__item" ></div>
+            </div>
           </div>
-          <div class="slider__section">
-              <div class="slider__text">
-                  <div class="slider__hidden">
-                    <span></span>
-                  </div>
-                  <div>
-                    <h4>Espumante</h4>
-                    <h2>brut nature</h2>
-                    <p>Una sensación refrescante.</p>
-                    <a  href="/product/product-detail">ver producto</a>
-                  </div>
-                  
+          <div class="container">
+              <div class="recomendados">
+                  <h1 class="subtitulo">
+                      Recomendaciones para vos
+                  </h1>
+                  <div class="productos">
+                    <a href="/edit">
+                        <div class="card">
+                            <img src="/img/absolut.jpg" alt="">
+                            <h2>
+                             
+                            </h2>
+                            <h4>
+                              
+                            </h4>
+                          </div>
+                        </a>
+                        
+                    </div>
+            </div>
+        </div>
+        <div class="linea"> </div>
+        <div class="container">
+            <div class="otrosProd">
+                <h1 class="subtitulo">
+                    Otros Productos
+                </h1>
+                <div class="productoss">
+                  <a href="#">
+                      <div class="cards">
+                          <img src="/img/absolut.jpg" alt="">
+                          <h2>Producto N1</h2>
+                          <h4>$12.345,67</h4>
+                      </div>
+                    </a>
+                    <a href="#">
+                        <div class="cards">
+                            <img src="/img/whisky.jpg" alt="">
+                            <h2>Producto N2</h2>
+                            <h4>$12.345,67</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="cards">
+                            <img src="/img/perignon.jpg" alt="">
+                            <h2>Producto N3</h2>
+                            <h4>$12.345,67</h4>
+                        </div>
+                    </a>
+            
+                    <a href="#">
+                      <div class="cards">
+                          <img src="/img/Tequila.jpg" alt="">
+                          <h2>Producto N4</h2>
+                          <h4>$12.345,67</h4>
+                      </div>
+                  </a>
               </div>
-              <img src="img/home-cr-01.png" alt="vino espumante" class="slider__img">
-          </div> 
-         <div class="slider__section">
-              <div class="slider02__text">
-                  <h2>Tour Tradicional</h2>
-                  <h4>Degustación de 3 copas</h4>
-                  <p>Visitá nuestras bodegas y degusta una selección de 3 vinos</p>
-              </div>
-              <div>
-                <span></span>
-              </div>
-              <img src="img/home-cr-02.png" alt="foto de bodega" class="slider__img">
-          </div>
-          <div class="slider__section">
-              <div class="slider03__text">
-                  <h2>Sorpréndete con estos vinos</h2>
-                  <a  href="/product/catalogue">ver catálogo</a>
-              </div>
-              <img src="img/home-cr-03.png" alt="vinos tintos" class="slider__img">
           </div>
       </div>
-  </div>
-  <!-- fin contenedor banner principal -->
-<!--Inicio seccion filolosofia-->
-<section class="philosophy">
-  <div class="text-content">
-  <div class="title-philosophy">
-    <img src="img/title-filosofia.png" alt="imagen de título">
-  </div>
-  <h2>Una copa, una historia</h2>
-  <div class="text-circle"><p>En <b>Terra Rossa</b> sabemos que no se puede comprar la felicidad, pero un buen vaso de vino en el momento oportuno vale más que todas las riquezas de la tierra. Por éste motivo nos dedicamos a darte siempre lo mejor, en cada momento y en cada lugar.</p>
- <img src="img/side-view-glass-of-red-wine-with-human-hand.jpg" alt="">
-  </div>
-  </div>
-</section>
-<!--Fin seccion filosofia-->
-
-<!--Inicio seleccion terra rossa-->
-<section class="container__selection">
-  <div class="selection__title"><h1>SELECCIÓN TERRA ROSSA</h1></div>
-  <div class="container__buttonarrow">
-    <div class="selection__nextbuttonLeft"><i class="fa-solid fa-caret-left"></i></div>
-  <div class="selection__nextbuttonRight"> <i class="fa-solid fa-caret-right"></i></div>
-</div>
-<div class="container__block">
-  <% selecciones.forEach(seleccion => { %>
-    <article class="block">
-        <p class="selection__type" ><%= seleccion.nombre_producto %></p>       
-      <img class="selection__product" src="/img/productImg/<%= seleccion.imagen_producto %>" alt="Aqui va la imagen">
-      <a class="selection__botomver" href="/product/product-detail/<%= seleccion.id_producto %>" target="ver.productoDetail">VER PRODUCTO</a>
-    </article>
-  <% }); %>
-<!--<script>
-const button = document.getElementById('next');
-
-button.onclick = function (next) {
-document.getElementById('container__block').scrollLeft += 20;
-};
-</script>-->
-</div>
-
-</section>
-
-      <!-- Seccion de novedades -->
-    <section class="news">
-      <article ><h2 class="subtitle">Novedades:</h2></article>
-      <article >
-        <ul class="product-news">
-          <% news.forEach(news => { %>
-          <li class="item">
-            <div><img class="img" src="<%=news.img%>"></div>
-            <div class="parrafo"><p><h2 class="news-title"><%=news.titulo%></h2></p>
-            <a href="/content/blog/<%=news.id_novedades%>"><button>LEER MAS</button></a>
+      <div class="linea"> </div>
+      <div class="container">
+          <div class="newsletter">
+              <h1 class="subtitulo">
+                  Suscribite a nuestro Newsletter
+              </h1>
+              <form>
+                  <input type="email" placeholder="Ingresa tu Email...">
+                  <a href="#" class="subs">Suscribirme</a>
+              </form>
           </div>
-          </li>
-          <%})%>
-        </ul>
-      </article>
-    </section>
-    
-    </main>
-   <footer class="footer">
-    <%- include('partials/footer.ejs')%>
-   </footer>
-  </body>
-  </html>
+      </div>
+      <div class="linea"> </div>
+      <div class="container">
+          <div class="callback">
+              <h1>
+                  Comenzá a comprar ahora
+              </h1>
+              <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, nesciunt, saepe sapiente facere, placeat accusantium porro fuga repudiandae minus provident excepturi expedita iste? Aspernatur similique magni placeat ullam quibusdam omnis!
+              </p>
+              <div class="botonesCB">
+                  <a href="/login" class="ingreso">
+                              Ingresá
+                          </a>
+                  <a href="/register" class="registro">
+                              Registrate
+                          </a>
+              </div>
+          </div>
+      </div>
+  </main>
+         
+
+  <footer class="footer-section">
+    <%- include('./partials/footer.ejs')%>
+        </fooer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var showHeaderAt = 150;
+                var win = $(window),
+                    body = $('body');
+                // Show the fixed header only on larger screen devices
+                if (win.width() > 400) {
+                    // When we scroll more than 150px down, we set the
+                    // "fixed" class on the body element.
+                    win.on('scroll', function(e) {
+                        if (win.scrollTop() > showHeaderAt) {
+                            body.addClass('fixed');
+                        } else {
+                            body.removeClass('fixed');
+                        }
+                    });
+                }
+            });
+        </script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+  
